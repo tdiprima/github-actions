@@ -1,0 +1,30 @@
+name: GitHub Actions Maven Build Example
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main branch from GitHub
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 8
+        uses: actions/setup-java@v4
+        with:
+          java-version: '8'
+          distribution: 'adopt'
+
+      - name: Build Maven Project
+        run: mvn -B package --file pom.xml
+
+      - name: List current directory
+        run: ls -laF
+
+      - name: List target directory
+        run: |
+          cd target
+          ls -laF
