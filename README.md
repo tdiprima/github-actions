@@ -1,3 +1,5 @@
-# github-actions
+# GitHub Actions 
 
-See also: [rock-paper-scissors](https://github.com/tdiprima/rock-paper-scissors/)
+See also: [Rock-Paper-Scissors](https://github.com/tdiprima/rock-paper-scissors/)
+
+Please refer to the `.github` directory and the README.
